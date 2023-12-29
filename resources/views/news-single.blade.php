@@ -64,7 +64,9 @@
             {{-- share to social media --}}
              @include('layouts.share-buttons')
 
-
+             <div class="pb-5">
+                @include('layouts.news-category-mobile')
+            </div>
 
                @include('layouts.news-recommended')
 

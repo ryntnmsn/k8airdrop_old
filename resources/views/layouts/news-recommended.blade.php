@@ -1,5 +1,5 @@
  {{-- recommended news --}}
-<section class="mt-12">
+<section class="mt-5">
     <h1 class="text-blue-100 text-2xl">{{__('Recommended to read')}}</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-6">
         @foreach ($recommendedBlog as $blog)

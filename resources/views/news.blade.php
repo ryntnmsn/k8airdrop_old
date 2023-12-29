@@ -44,12 +44,16 @@
                     </div>
                 </section>
 
+                <div>
+                    @include('layouts.news-category-mobile')
+                </div>
+
                 {{-- news --}}
                 <section class="mt-12">
+
                     <div class="pb-5 flex">
                         <div class="flex-1"><h1 class="text-blue-100 text-2xl">{{__('News')}}</h1></div>
                         <div class="flex items-center">
-                           
                         </div>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">

@@ -1,5 +1,5 @@
 {{-- categories --}}
-<div class="p-4 bg-gray-900 rounded-xl text-blue-100">
+<div class="p-4 hidden lg:block bg-gray-900 rounded-xl text-blue-100">
     <h1 class="text-xl pb-4">{{__('Categories')}}</h1>
     <ul class="">
     @foreach ($categories as $category)

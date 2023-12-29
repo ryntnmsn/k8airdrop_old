@@ -2,11 +2,16 @@
 @section('title') @stop
 
 @section('content')
-
-    <div class="mt-12">
-        <div class="pb-5 flex">
-            <div class="flex-1"><h1 class="text-blue-100 text-2xl">{{__('Category')}}: {{__($category_blog->title)}}</h1></div>
+    
+    <div class="mt-5">
+        <div class="flex">
+            <div class="flex-1"><h1 class="text-blue-100 text-2xl">{{__($category_blog->title)}}</h1></div>
         </div>
+
+        <div class="pb-5">
+            @include('layouts.news-category-mobile')
+        </div>
+
         <div class="flex-none lg:flex md:flex-none">
             <div class="flex-0 lg:w-4/5 md:w-full lg:pe-8 md:pe-0">
             
