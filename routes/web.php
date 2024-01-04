@@ -313,3 +313,7 @@ Route::get('/tgcn', function() {
     return view('share');
  });
 
+
+ Route::get('/playroom', function () {
+    return view('playroom');
+ });
