@@ -13,8 +13,7 @@ class Choice extends Model
 
     protected $casts = [
         'question_id' => 'array',
-        ];
-
+    ];
 
     public function promos() {
         return $this->belongsTo(Promo::class);

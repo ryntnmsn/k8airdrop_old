@@ -31,6 +31,7 @@ class QuestionController extends Controller
     
             $question_create = Question::create([
                 'question' => $request->question,
+                'type' => $request->type,
                 'promo_id' => $request->promo_id,
                 'promo_url_id' => $request->promo_url_id,
                 'language_id' => $request->language_id,
@@ -70,6 +71,7 @@ class QuestionController extends Controller
 
             $question->update([
                 'question' => $request->question,
+                'type' => $request->type,
             ]);
 
             $choices = Choice::where('question_id', $id);

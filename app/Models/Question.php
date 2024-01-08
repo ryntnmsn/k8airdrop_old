@@ -13,7 +13,7 @@ class Question extends Model
 
     protected $casts = [
         'question_id' => 'array',
-        ];
+    ];
 
 
     public function promos() {

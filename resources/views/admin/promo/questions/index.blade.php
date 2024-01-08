@@ -6,8 +6,7 @@
 
 <div class="row">
     <div class="col">
-        <div><h3>{{$promos->title}} {{$promos->id}}</h3></div>
-        <div><h5>Manage Questions</h5></div>
+        <div><h3>{{$promos->title}}</h3></div>
     </div>
     <div class="col text-end">
         {{-- <button type="button" class="btn text-white bg-primary fw-bold" data-bs-toggle="modal" data-bs-target="#createQuestionModal">
@@ -28,7 +27,7 @@
                         <form action="/admin/airdrop/promo/manage_question/store" method="post">
                             @csrf
                             <div class="d-flex justify-end">
-                                <div class="w-100 me-2">
+                                <div class="me-2 w-100">
                                     <input type="hidden" name="promo_url_id" value="{{$promos->url_id}}">
                                     <input type="hidden" name="promo_id" value="{{$promos->id}}">
                                     <input type="hidden" name="language_id" value="{{$promos->language_id}}">
@@ -38,14 +37,20 @@
                                     class="form-control me-2 mb-2 p-2 questionaire-input"
                                     placeholder="Question title*">
                                 </div>
-                                <div class="pt-2 mb-4">
+                                <div class="px-4">
+                                    <select name="type" id="" class="p-2" style="border:1px solid #c6c6c6; border-radius:4px">
+                                        <option value="single_select">Single Select</option>
+                                        <option value="multiple_select">Multiple Select</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
                                     <span id="extend" class="questionaire-add-option">+ Add options</span>
                                 </div>
                             </div>
                             <div>
                                 <div id="extend-field"></div>
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-4">
                                 <button type="submit" class="questionaire-save-btn">Save Question</button>
                             </div>
                         </form>

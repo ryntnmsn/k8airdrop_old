@@ -170,7 +170,6 @@ class HomeController extends Controller
 public function store_register(Request $request, $slug, $url_id) {
         $promo = Promo::with('participants')->where('slug', $slug)->where('url_id', $url_id)->first();
         
-
         $validator = Validator::make($request->all(), [
             'k8_username' => 'required|min:3|max:30',
             'preferred_platform' => 'required|min:3|max:30',
@@ -236,7 +235,7 @@ public function store_register(Request $request, $slug, $url_id) {
                                 'participant_ip' => request()->ip(),
                             ]);
     
-                            foreach ($request->choices as $choice => $choice_value) {
+                            foreach ($request->choices as $key => $choice_value) {
                                 $choices =  $participant->choices()->attach($choice_value);
                             }
                         }

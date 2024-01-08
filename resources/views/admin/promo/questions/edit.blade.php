@@ -36,7 +36,13 @@
                                     placeholder="Question title*"
                                     value="{{$question->question}}">
                                 </div>
-                                <div class="pt-2 mb-4">
+                                <div class="px-4">
+                                    <select name="type" id="" class="p-2" style="border:1px solid #c6c6c6; border-radius:4px">
+                                        <option value="single_select" @if($question->type == 'single_select') selected @endif>Single Select</option>
+                                        <option value="multiple_select" @if($question->type == 'multiple_select') selected @endif>Multiple Select</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
                                     <span id="extend" class="questionaire-add-option">+ Add options</span>
                                 </div>
                             </div>
@@ -51,7 +57,7 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="mt-2">
+                            <div class="mt-4">
                                 <button type="submit" class="questionaire-save-btn">Save changes</button>
                             </div>
                             </form>
